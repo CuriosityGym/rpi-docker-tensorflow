@@ -27,7 +27,7 @@ RUN pip --no-cache-dir install \
         matplotlib && \
             python -m ipykernel.kernelspec
 			
-RUN pip --no-cache-dir install keras		
+RUN pip install keras		
 
 ADD tensorflow-0.10.0-cp27-none-linux_armv7l.whl .
 
