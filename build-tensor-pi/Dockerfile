@@ -3,8 +3,7 @@ FROM resin/rpi-raspbian
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
         curl \
-		keras \
-        libfreetype6-dev \
+		libfreetype6-dev \
         libpng12-dev \
         libzmq3-dev \
         pkg-config \
@@ -27,6 +26,8 @@ RUN pip --no-cache-dir install \
         jupyter \
         matplotlib && \
             python -m ipykernel.kernelspec
+			
+RUN pip --no-cache-dir install keras		
 
 ADD tensorflow-0.10.0-cp27-none-linux_armv7l.whl .
 
